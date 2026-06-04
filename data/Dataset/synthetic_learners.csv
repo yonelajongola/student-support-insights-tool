@@ -1,0 +1,31 @@
+LearnerID,AgeBand,Province,DeviceAccess,InternetAccess,DigitalConfidence,ProgrammingConfidence,AIFamiliarity,EmploymentStatus,SupportNeed,AttendanceRisk,Notes
+L001,18-24,Western Cape,Laptop,Reliable,4,3,2,Unemployed,Transport,Medium,Needs bus pass
+L002,25-29,Gauteng,Phone only,Unstable,2,1,1,Under-employed,Data,High,Struggles with data costs
+L003,18-24,KZN,Shared laptop,Limited,3,2,2,Employed part-time,Academic support,Low,Needs extra tutoring
+L004,30-35,Western Cape,Laptop,Reliable,5,4,3,Unemployed,Mentoring,Medium,Interested in mentorship
+L005,18-24,Gauteng,Laptop,Limited,2,2,1,Unemployed,Transport,High,Missed classes due to transport
+L006,25-29,KZN,Phone only,Unstable,1,1,1,Under-employed,Data,High,No laptop at home
+L007,18-24,Western Cape,Shared laptop,Reliable,3,3,2,Employed part-time,Academic support,Low,Needs help with assignments
+L008,30-35,Gauteng,Laptop,Reliable,4,5,4,Unemployed,Mentoring,Medium,Looking for career advice
+L009,18-24,KZN,Phone only,Limited,2,2,1,Unemployed,Data,High,Struggles with connectivity
+L010,25-29,Western Cape,Laptop,Reliable,5,4,3,Employed part-time,Transport,Low,Regular attendance
+L011,18-24,Gauteng,Shared laptop,Unstable,3,2,2,Under-employed,Academic support,Medium,Needs group study
+L012,30-35,KZN,Laptop,Reliable,4,3,3,Unemployed,Mentoring,Low,Interested in tech careers
+L013,18-24,Western Cape,Phone only,Limited,1,1,1,Unemployed,Data,High,No home internet
+L014,25-29,Gauteng,Laptop,Reliable,5,5,4,Employed part-time,Transport,Low,Good attendance
+L015,18-24,KZN,Shared laptop,Unstable,2,2,2,Under-employed,Academic support,Medium,Needs extra help
+L016,30-35,Western Cape,Laptop,Reliable,4,4,3,Unemployed,Mentoring,Low,Seeks guidance
+L017,18-24,Gauteng,Phone only,Limited,1,1,1,Unemployed,Data,High,No device at home
+L018,25-29,KZN,Laptop,Reliable,5,4,3,Employed part-time,Transport,Low,Always present
+L019,18-24,Western Cape,Shared laptop,Unstable,3,2,2,Under-employed,Academic support,Medium,Needs peer support
+L020,30-35,Gauteng,Laptop,Reliable,4,5,4,Unemployed,Mentoring,Low,Interested in leadership
+L021,18-24,KZN,Phone only,Limited,2,2,1,Unemployed,Data,High,Needs internet access
+L022,25-29,Western Cape,Laptop,Reliable,5,4,3,Employed part-time,Transport,Low,No issues
+L023,18-24,Gauteng,Shared laptop,Unstable,3,2,2,Under-employed,Academic support,Medium,Needs more resources
+L024,30-35,KZN,Laptop,Reliable,4,3,3,Unemployed,Mentoring,Low,Seeks networking
+L025,18-24,Western Cape,Phone only,Limited,1,1,1,Unemployed,Data,High,No laptop
+L026,25-29,Gauteng,Laptop,Reliable,5,5,4,Employed part-time,Transport,Low,Good progress
+L027,18-24,KZN,Shared laptop,Unstable,2,2,2,Under-employed,Academic support,Medium,Needs more time
+L028,30-35,Western Cape,Laptop,Reliable,4,4,3,Unemployed,Mentoring,Low,Interested in tech
+L029,18-24,Gauteng,Phone only,Limited,1,1,1,Unemployed,Data,High,No device
+L030,25-29,KZN,Laptop,Reliable,5,4,3,Employed part-time,Transport,Low,Consistent

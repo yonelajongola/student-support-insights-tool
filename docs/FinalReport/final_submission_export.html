@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html><head><meta charset="utf-8" /><title>Final Submission Document</title>
+<style>body{font-family:Calibri,Segoe UI,Arial,sans-serif;line-height:1.45;margin:36px;color:#1f2937;}h1,h2,h3,h4{color:#0f172a;margin-top:24px;margin-bottom:12px;}h1{font-size:24pt;}h2{font-size:18pt;}h3{font-size:14pt;}p{margin:0 0 12px;}ul,ol{margin:0 0 12px 24px;}li{margin:0 0 6px;}code{font-family:Consolas,monospace;background:#f3f4f6;padding:1px 4px;border-radius:3px;}img{max-width:100%;height:auto;border:1px solid #d1d5db;margin:8px 0 14px;}figure{margin:18px 0;}figcaption{font-size:10pt;color:#4b5563;}blockquote{border-left:4px solid #cbd5e1;padding-left:12px;color:#475569;margin:12px 0;}</style>
+</head><body>
+<h1>Final Submission Document</h1>
+<h2>Cover Page</h2>
+<ul>
+<li>Project Title: Student Support Insights Tool</li>
+<li>Student Name: Yonela Jongola</li>
+<li>Student Number: 12525456122</li>
+<li>Course: SFIA Level 3 Integrated Assessment</li>
+<li>Submission Date: 01/06/2026</li>
+</ul>
+<h2>Executive Summary</h2>
+<p>This submission presents the completed Student Support Insights Tool prototype. The final system helps programme teams upload or capture learner support data, validate it, view dashboard trends, identify learners who may need earlier support, and generate practical recommendations for human-reviewed intervention planning. Synthetic data was used throughout to reduce privacy risk while still demonstrating realistic system behavior.</p>
+<p>The final version also includes settings-driven display preferences, ethics confirmation before sensitive actions, confirmation on every data upload, confirmation before clearing report state, and refreshed screenshot and build evidence for submission review.</p>
+<h2>1. Problem Statement And Context</h2>
+<p>Digital skills programmes often collect useful learner information, but the data is not always analyzed early enough or consistently enough to support timely intervention. This can delay support and reduce consistency in staff decision-making. This project addresses the following core question:</p>
+<p>How can a programme team use learner data responsibly to identify support needs, prioritize support actions, and improve learner success?</p>
+<h2>2. Stakeholder And User Needs</h2>
+<p>Primary stakeholders include learners, programme staff, leadership, IT support, and mentors. Learners require timely and fair support. Staff require clear evidence for prioritization. Leadership requires performance visibility for planning and resource allocation. Supporting models:</p>
+<ul>
+<li>Stakeholder map: docs/FinalReport/stakeholder_map_template.md</li>
+<li>Value model: docs/BusinessModels/value_model_diagram.md</li>
+<li>Completed peer/stakeholder review record: docs/Documentation/completed_peer_stakeholder_review.md</li>
+<li>Assessor walkthrough review: docs/Documentation/assessor_walkthrough_review.md</li>
+</ul>
+<h2>3. Current Process And Improved Process</h2>
+<p>The as-is process is mostly manual and depends on spreadsheet review. The to-be process is more organized: capture or upload learner data, validate it, generate dashboard analytics, flag possible support risk, produce recommendations, and let staff review the result before taking action.</p>
+<ul>
+<li>As-is model: docs/ProcessModels/as_is_process_template.md</li>
+<li>To-be model: docs/ProcessModels/to_be_process_template.md</li>
+</ul>
+<h2>4. Data Description And Preparation</h2>
+<p>Dataset: 30 synthetic learner records with fields for access, confidence, support need, and attendance risk. Data quality controls implemented:</p>
+<ul>
+<li>Missing value checks</li>
+<li>Controlled-value validation for age band, device access, internet access, and attendance risk</li>
+<li>Duplicate learner ID detection</li>
+<li>Confidence range checks (1 to 5)</li>
+<li>Quote-aware CSV parsing for notes containing commas</li>
+<li>Row-level validation errors with line numbers for rejected uploads</li>
+<li>Inline manual-form validation support</li>
+</ul>
+<p>Supporting evidence:</p>
+<ul>
+<li>Dataset: data/Dataset/synthetic_learners.csv</li>
+<li>Data dictionary: data/Dataset/data_dictionary.md</li>
+</ul>
+<h2>5. Analytics Findings And Visualizations</h2>
+<p>The final prototype exceeds the minimum visualization requirement with five implemented charts:</p>
+<ul>
+<li>Risk distribution across Low, Medium, High, and Critical categories</li>
+<li>Support need distribution</li>
+<li>Device access distribution</li>
+<li>Internet access by province</li>
+<li>Confidence comparison across digital, programming, and AI familiarity scores</li>
+</ul>
+<p>Key findings include concentration of high-risk learners, internet and device constraints, uneven confidence across digital capability areas, and recurring support needs that can be prioritized for intervention planning.</p>
+<ul>
+<li>Findings: docs/FinalReport/analytics_findings.md</li>
+</ul>
+<h2>6. Prototype Description</h2>
+<p>Implemented features:</p>
+<ul>
+<li>CSV upload and manual entry</li>
+<li>Inline and row-level validation feedback</li>
+<li>Dashboard with KPI cards and 5 charts</li>
+<li>Searchable and filterable high-risk learner table with score, priority, and reason codes</li>
+<li>Recommendation output (3 practical recommendations)</li>
+<li>Ethics/privacy notice with human review checklist</li>
+<li>Help and Settings modal workflow</li>
+<li>Settings persistence and configurable dashboard display controls</li>
+<li>Upload confirmation on every file upload</li>
+<li>New Report confirmation before clearing loaded learner data</li>
+<li>CSV export</li>
+</ul>
+<p>Technical implementation:</p>
+<ul>
+<li>Backend: ASP.NET Core (.NET 10)</li>
+<li>Frontend: React + TypeScript + Vite + Recharts</li>
+<li>Main run guide: README.md</li>
+</ul>
+<h2>7. AI, Data Ethics, And Privacy Review</h2>
+<p>The ethics section was strengthened because the tool works with learner support indicators such as access, confidence, attendance risk and support needs. Even without names, this information can influence how learners are understood by staff, so the prototype treats it as confidential support information.</p>
+<p>The prototype follows these responsible-use principles:</p>
+<ul>
+<li>Data minimization: no names, ID numbers, phone numbers, home addresses or unnecessary identifiers are required.</li>
+<li>Purpose limitation: the data is only for learner support planning, not discipline, exclusion, admissions or unrelated decisions.</li>
+<li>Transparency: the risk score is rule-based and shows reason codes so staff can understand why a learner was flagged.</li>
+<li>Fairness: access barriers such as limited internet or phone-only learning are treated as resource needs, not learner failure.</li>
+<li>Human review: risk flags are support signals only; a staff member must review context before any intervention.</li>
+<li>Harm prevention: the tool must not automate disciplinary, progression, funding or exclusion decisions.</li>
+</ul>
+<p>Final interface controls also reinforce this approach:</p>
+<ul>
+<li>Ethics confirmation before upload, manual entry, and export</li>
+<li>Privacy mode in display settings</li>
+<li>Responsible-use reminder messaging</li>
+<li>Confirmation before upload and before clearing report state</li>
+</ul>
+<p>The ethics review also includes a privacy notice, consent guidance, human-review workflow, data retention recommendation, bias risks, security recommendations and a governance checklist.</p>
+<ul>
+<li>Ethics review: docs/EthicsReview/ethics_review.md</li>
+<li>Ethics governance checklist: docs/EthicsReview/ethics_governance_checklist.md</li>
+</ul>
+<h2>8. Methods, Tools, And Development Approach</h2>
+<p>Delivery followed a staged 15-day plan with iterative build-test-refine cycles and structured evidence capture. Later work focused on reliability hardening, settings architecture, UX refinements, and final QA evidence.</p>
+<ul>
+<li>Project plan: docs/FinalReport/project_plan.md</li>
+<li>15-day plan: docs/FinalReport/15_day_delivery_plan.md</li>
+</ul>
+<h2>9. Testing, Bug Fixes, And Quality Evidence</h2>
+<p>Testing was completed across API behavior, validation paths, dashboard contract integrity, interaction flows, and frontend/backend build quality. Bugs were tracked and resolved with evidence for import parsing, risk explainability, upload feedback, modal behavior, and health-check handling.</p>
+<ul>
+<li>Test log: evidence/Testing/test_log.md</li>
+<li>Bug log: evidence/BugLogs/bug_log.md</li>
+</ul>
+<p>Final QA confirmed:</p>
+<ul>
+<li>Help modal opens and closes correctly</li>
+<li>Settings modal opens and API status checks work</li>
+<li>Ethics confirmation gates sensitive actions</li>
+<li>Every upload triggers a confirmation prompt</li>
+<li>New Report triggers a confirmation prompt before clearing state</li>
+<li>Frontend typecheck passes and backend Release build succeeds</li>
+</ul>
+<h2>10. Reflection</h2>
+<h3>Personal learning note</h3>
+<p>This project helped me see that a dashboard is only useful if the data behind it is clean and the meaning of the numbers is clear. I also realized that risk scoring can be sensitive, so I kept the score explainable and included human review instead of presenting it as an automatic decision. A real version of this tool would still need review by programme staff and testing with properly anonymized data before being used operationally.</p>
+<p>A major challenge was balancing the working prototype with all the evidence required by the assignment. Earlier versions were too focused on the dashboard and not enough on evidence mapping, testing, responsible-use wording, and reliability. I improved this by building around the assignment essentials first, then strengthening validation, ethics controls, settings behavior, screenshots, and final evidence traceability.</p>
+<h2>11. Evidence Inventory Mapped To SFIA Skills</h2>
+<p>See docs/FinalReport/evidence_inventory_sfia.md.</p>
+<h2>12. Final Submission Checklist</h2>
+<ul>
+<li>Working prototype: Complete</li>
+<li>Integrated report: Complete</li>
+<li>Synthetic dataset: Complete</li>
+<li>Data dictionary: Complete</li>
+<li>5 visualizations: Complete</li>
+<li>5 or more insights: Complete</li>
+<li>3 or more recommendations: Complete</li>
+<li>As-is and to-be process models: Complete</li>
+<li>Business/value model: Complete</li>
+<li>Ethics and privacy review: Complete</li>
+<li>Ethics governance checklist: Complete</li>
+<li>Testing log and bug log: Complete</li>
+<li>README/user guide: Complete</li>
+<li>SFIA evidence checklist: Complete</li>
+<li>Completed peer/stakeholder review record: Complete</li>
+<li>Screenshot evidence regenerated: Complete</li>
+<li>Frontend typecheck verified: Complete</li>
+<li>Backend Release build verified: Complete</li>
+</ul>
+<h2>Appendices</h2>
+<p>Evidence is packaged in the following order for submission review:</p>
+<ul>
+<li>README and user guide</li>
+<li>Dataset and data dictionary</li>
+<li>Process models and value model</li>
+<li>Ethics review, governance checklist, privacy notice and responsible-use evidence</li>
+<li>Testing log, bug log, and SFIA evidence checklist</li>
+<li>Peer or stakeholder review record</li>
+<li>Screenshot appendix and build evidence</li>
+</ul>
+<h3>Appendix A: Academic UI Redesign Reference</h3>
+<p>High-fidelity redesign reference used to guide the academic look-and-feel and information hierarchy.</p>
+<figure><img src="../../evidence/Testing/screenshots/academic-interface-reference.png" alt="Academic UI redesign reference" /><figcaption>Academic UI redesign reference</figcaption></figure>
+<h3>Appendix B: Dashboard Overview (Clean Report Capture)</h3>
+<p>Clean dashboard screenshot prepared for report readability, showing data input, KPI area, and visual insight cards.</p>
+<figure><img src="../../evidence/Testing/screenshots/dashboard-overview-report-clean.png" alt="Dashboard overview clean" /><figcaption>Dashboard overview clean</figcaption></figure>
+<h3>Appendix C: Learner Risk Review</h3>
+<p>Shows the staff review table with risk level, reason indicators, support category, and engagement bars.</p>
+<figure><img src="../../evidence/Testing/screenshots/risk-review.png" alt="Learner risk review" /><figcaption>Learner risk review</figcaption></figure>
+<h3>Appendix D: High-Risk Learner Table</h3>
+<p>Shows the searchable high-risk table with score, priority, and detailed factor chips for human-reviewed follow-up.</p>
+<figure><img src="../../evidence/Testing/screenshots/risk-table.png" alt="High-risk learner table" /><figcaption>High-risk learner table</figcaption></figure>
+<h3>Appendix E: CSV Upload Validation</h3>
+<p>Shows the row-level validation panel produced when invalid CSV values are uploaded.</p>
+<figure><img src="../../evidence/Testing/screenshots/upload-validation.png" alt="Upload validation panel" /><figcaption>Upload validation panel</figcaption></figure>
+<h3>Appendix F: Manual Form Validation</h3>
+<p>Shows inline field-level validation on the manual learner entry form.</p>
+<figure><img src="../../evidence/Testing/screenshots/manual-form-validation.png" alt="Manual form validation" /><figcaption>Manual form validation</figcaption></figure>
+<h3>Appendix G: Recommendations And Ethics</h3>
+<p>Shows recommendations alongside ethics and privacy guidance to support accountable staff decisions.</p>
+<figure><img src="../../evidence/Testing/screenshots/recommendations-ethics.png" alt="Recommendations and ethics panels" /><figcaption>Recommendations and ethics panels</figcaption></figure>
+<h3>Appendix H: Settings View</h3>
+<p>Shows dashboard preference controls for layout, chart visibility, privacy mode, and export behavior.</p>
+<figure><img src="../../evidence/Testing/screenshots/settings-view.png" alt="Settings modal and preference controls" /><figcaption>Settings modal and preference controls</figcaption></figure>
+<h3>Appendix I: Help View</h3>
+<p>Shows embedded guidance for onboarding staff, ethical use, CSV requirements, and troubleshooting.</p>
+<figure><img src="../../evidence/Testing/screenshots/help-view.png" alt="Help modal guidance view" /><figcaption>Help modal guidance view</figcaption></figure>
+<h3>Appendix J: Frontend Build Evidence</h3>
+<p>Successful frontend production build output captured for submission evidence.</p>
+<figure><img src="../../evidence/Testing/screenshots/frontend-build.png" alt="Frontend build evidence" /><figcaption>Frontend build evidence</figcaption></figure>
+<h3>Appendix K: Backend Build Evidence</h3>
+<p>Successful backend Release build output captured for submission evidence.</p>
+<figure><img src="../../evidence/Testing/screenshots/backend-build.png" alt="Backend build evidence" /><figcaption>Backend build evidence</figcaption></figure>
+</body></html>
